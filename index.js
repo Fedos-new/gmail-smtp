@@ -4,7 +4,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
 
-let port = process.env.PORT || 3010 || 3000
+
 let smtp_login = process.env.SMTP_LOGIN
 let smtp_password = process.env.SMTP_PASSWORD
 
@@ -48,6 +48,9 @@ app.post('/sendMessage', async function (req, res) {
 
     res.send("Ok")
 })
+
+
+let port = process.env.PORT || 3010
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
