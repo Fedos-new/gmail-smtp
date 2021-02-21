@@ -17,7 +17,7 @@ let transporter = nodemailer.createTransport({
     // service: "gmail",
     host: "smtp.yandex.ru",
     port: 465,
-    secure: true, // true for 465, false for other ports
+    secure: false, // true for 465, false for other ports
     auth: {
         user: smtp_login, // generated ethereal user
         pass: smtp_password, // generated ethereal password
