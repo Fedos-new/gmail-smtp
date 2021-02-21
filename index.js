@@ -14,10 +14,10 @@ app.use(bodyParser.json())
 
 
 let transporter = nodemailer.createTransport({
-    service: "gmail",
-    // host: "smtp.ethereal.email",
-    // port: 587,
-    // secure: false, // true for 465, false for other ports
+    // service: "gmail",
+    host: "smtp.yandex.ru",
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
         user: smtp_login, // generated ethereal user
         pass: smtp_password, // generated ethereal password
@@ -36,7 +36,7 @@ app.post('/sendMessage', async function (req, res) {
     // send mail with defined transport object
     let info = await transporter.sendMail({
         from: 'MY PORTFOLIO SITE', // sender address
-        to: "fedluky@gmail.com", // list of receivers
+        to: "fedluky@gmail.com", // list of receivers  smtp.yandex.ru
         subject: "Письмо от HR", // Subject line
         // text: "Привет, это проверочное письмо!!! С созданного тобой сервера", // plain text body
         html: `<b>Сообщение с вашего portfolio page</b>
