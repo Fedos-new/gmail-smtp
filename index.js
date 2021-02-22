@@ -14,10 +14,10 @@ app.use(bodyParser.json())
 
 
 let transporter = nodemailer.createTransport({
-    // service: "gmail",
-    host: "smtp.yandex.ru",
-    port: 465,
-    secure: false, // true for 465, false for other ports
+    service: "gmail",
+    //host: "smtp.yandex.ru",
+    //port: 465,
+    //secure: false, // true for 465, false for other ports
     auth: {
         user: smtp_login, // generated ethereal user
         pass: smtp_password, // generated ethereal password
